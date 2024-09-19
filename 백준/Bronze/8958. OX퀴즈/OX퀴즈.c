@@ -16,17 +16,17 @@ int main()
     {
         scanf("%s", ox);
         total = 0;
-        score = 1;
+        score = 0;
         for(j = 0; j < strlen(ox); j++)
         {
             if(ox[j] == 'O')
             {
-                total += score;
                 score++;
+                total += score;
             }
             if(ox[j] == 'X')
             {
-                score = 1;
+                score = 0;
             }
         }
         printf("%d\n", total);
